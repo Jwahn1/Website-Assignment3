@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Website</title>
+    <link rel="icon" href="Pictures/Bunny_Hood.png">
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        a:hover{
+            color:yellow;
+        }
+
+        a:visited:hover{
+            color:purple;
+        }
+
+        a:visited{
+            color:red;
+        }
+
+        textarea{
+            width:500px;
+        }
+
+    .hero-image {
+      background-image:url("Pictures/programming_animation.gif");
+      height: 50%;
+      width:100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    /*for the gallery*/
+       div.gallery {
+          margin:10px;
+           float:left
+    }
+
+
+
+    /*tablet*/
+    @media only screen and (max-width: 1000px) {
+        textarea{
+            width:90%;
+        }
+
+       div.gallery {
+            float:left;
+        }
+    }
+    /*mobile*/
+    @media only screen and (max-width: 400px) {
+        textarea{
+            width:90%;
+        }
+
+       div.gallery {
+            float:left;
+        }
+        img{
+            width:90%;
+            height:90%;
+        }
+    }
+
+
+    </style>
+</head>
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Welcome to my website</h1>
+        <p>-Javier Wahn</p>
+    </div>
+</div>
+<body>
+    <table>
+        <td><a href="Code_Repository.html">Code Repository</a></td>
+        <th>||</th>
+        <td><a href="Personal_Page.html">Personal Info</a></td>
+    </table><br>
+
+    <label for="myWebsite">Opinion Box:</label><br>
+    <textarea id="myWebsite" name="myWebsite"  rows="4" cols="50">
+    Thank you for giving us your opinion about our website.
+    </textarea><br>
+
+    <button id="review">Send review</button>
+    <p id ="reviewMessage" hidden>hidden</p><br>
+
+    <h2>Examples of my code:</h2>
+    <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+            <img src="Pictures/Capture1.jpg" alt="Cinque Terre" width="400" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="img_forest.jpg">
+            <img src="Pictures/Capture2.jpg" alt="Forest" width="400" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+            <img src="Pictures/Capture3.jpg" alt="Northern Lights" width="400" height="400">
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+            <img src="Pictures/Capture4.jpg" alt="Mountains" width="400" height="400">
+        </a>
+    </div>
+
+
+
+</body>
+
+
+
+<script>
+    //index functions
+    const textArea = document.getElementById("myWebsite");
+    let Review ="";
+    const buttonReview = document.getElementById("review");
+    const reviewMessage = document.getElementById("reviewMessage");
+
+    textArea.addEventListener("input",function(){Review = textArea.value;});
+    buttonReview.addEventListener("click",function(){reviewMessage.innerHTML = Review; reviewMessage.removeAttribute("hidden");});
+</script>
+</html>

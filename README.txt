@@ -28,3 +28,5 @@ Personal_Page.html contains the table which is able to resize for both tablet si
 script.js contains scripts for changing the color scheme in Personal_Page.html by using buttons, it contains scripts for sending notifications
 in case the user tries to change the scheme to the one already in use which requires a conditional to check and event handlers to know when the user 
 uses the buttons.
+
+link to the website hosting:https://jwahn1.github.io/Website-Assignment3/Index.html
